@@ -15,7 +15,7 @@ const font = Figtree({
 });
 
 export const metadata: Metadata = {
-  title: "Spotify",
+  title: "Rosso",
   description: "Listen to music",
   icons: {
     icon: '/music-svgrepo-com.svg',
