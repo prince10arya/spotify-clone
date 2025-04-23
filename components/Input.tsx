@@ -3,11 +3,15 @@
 import type { InputHTMLAttributes, Ref } from "react";
 import { twMerge } from "tailwind-merge";
 
-interface InputProps extends InputHTMLAttributes<HTMLInputElement> {}
+interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
+    type: string;
+    disabled: boolean;
+
+}
 
 
 export default function Input(
-    { className, children, type, disabled, ...props}: InputProps, ref:Ref<HTMLInputElement>
+    {  type, disabled, ...props}: InputProps, ref:Ref<HTMLInputElement>
 
 ) {
     return (

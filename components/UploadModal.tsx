@@ -11,6 +11,7 @@ import toast from "react-hot-toast";
 import { useUser } from "@/hooks/useUser";
 import { useSupabaseClient } from "@supabase/auth-helpers-react";
 import { useRouter } from "next/navigation";
+import { error } from "console";
 
 export default function UploadModal() {
   const [isLoading, setIsLoading] = useState(false);
@@ -95,8 +96,9 @@ export default function UploadModal() {
         uploadModal.onClose();
 
       
-    } catch (e) {
-        toast.error("something wrogn")     
+    } catch (error) {
+        console.error(error);
+        toast.error("something wrong")     
     } finally{
         setIsLoading(false);
     }
