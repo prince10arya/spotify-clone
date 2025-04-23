@@ -15,9 +15,13 @@ const font = Figtree({
 });
 
 export const metadata: Metadata = {
-  title: "Spotify Clone",
+  title: "Spotify",
   description: "Listen to music",
+  icons: {
+    icon: '/music-svgrepo-com.svg',
+  },
 };
+
 
 export const revalidate = 0;
 
@@ -27,10 +31,12 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
 
+
   const userSongs = await getSongsByUserId();
 
   return (
     <html lang="en">
+     
       <body className={`${font.variable} antialiased`}>
         <ToasterProvider/>
         <SupaBaseProvider>
